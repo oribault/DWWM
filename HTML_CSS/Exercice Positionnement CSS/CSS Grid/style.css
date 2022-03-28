@@ -1,0 +1,39 @@
+body {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2.2fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+  }
+  
+header{
+    background:#BBCCFF ;
+    grid-area: 1 / 1 / 2 / 3;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+div{
+    background:#BBCCFF ;
+    grid-area: 1 / 3 / 2 / 4;
+    margin-bottom: 20px;
+    padding-left:20px;
+}
+nav{
+    background:#BBCCFF ;
+    grid-area: 2 / 1 / 4 / 2;
+    margin-right: 20px;
+}
+article{
+    background:#BBCCFF ;
+    grid-area: 2 / 2 / 3 / 4;
+    
+}
+section{
+    background: rgb(253, 253, 253);
+    
+}
+footer{
+    background:#BBCCFF ;
+    grid-area: 3 / 2 / 4 / 4;
+    margin-top: 20px;
+}

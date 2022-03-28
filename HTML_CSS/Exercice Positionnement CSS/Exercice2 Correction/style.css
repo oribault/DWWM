@@ -1,0 +1,14 @@
+:root{
+    --color_bleu: #CCDDFF;
+    --color: 
+}
+.supercontainer{
+    display: flex;
+    flex-direction: row;
+}
+header{
+    font-size: 1em;
+}
+header{
+    font-size: 1rem
+}

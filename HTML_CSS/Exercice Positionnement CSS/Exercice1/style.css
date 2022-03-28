@@ -1,0 +1,22 @@
+body{
+ background-color: RGB(235, 240, 240) ;
+}
+h1{
+    text-align: center;
+    background:RGB(230, 75, 60) ;
+    color : white;
+    padding: 20px
+}
+h2{
+    color: RGB(230, 75, 60);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+article{
+   min-width: 250px ;  
+   max-width: 300px;
+}

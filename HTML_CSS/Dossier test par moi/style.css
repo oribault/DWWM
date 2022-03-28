@@ -1,0 +1,38 @@
+/*GENERAL*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+h2{
+    text-align: center;
+}
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    padding : 20px;
+    color: white;
+    text-decoration: none;
+}
+.btn{
+    border-radius: 5px;
+    background-color: rgb(238, 253, 22);
+}
+/*HEADER*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    color: white;
+   
+}
+
+/*Menu*/
+.menu{
+    display: flex;
+    list-style: none;
+}
