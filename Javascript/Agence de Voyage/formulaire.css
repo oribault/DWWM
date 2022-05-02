@@ -1,0 +1,112 @@
+.enfant{
+	display: grid;
+	grid-template-columns: 1.3fr 1.5fr 1.3fr;
+	grid-template-areas: 1fr ;
+	grid-template-areas: 
+	". contact .";
+}
+.contact{
+    grid-area: contact;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
+    grid-template-areas: 
+    "paragraphe paragraphe"
+    "labelcivilite civilite"
+    "labelnom nom"
+    "labelprenom prenom"
+    "labeladress adress"
+    "labeltelephone telephone"
+    "labelemail email"
+    "labelobjet objet "
+    "labelmessage message"
+    "envois .";
+	background-color: #ccc;
+	padding: 5%;
+}
+
+
+#paragraphe{
+    grid-area: paragraphe;
+	justify-self: left;
+    
+}
+
+#labelcivilite{
+    grid-area: labelcivilite;
+    justify-self: left;
+}
+#civilite{
+    grid-area: civilite;
+    justify-self: left;
+}
+#labelnom{
+    grid-area: labelnom;
+    justify-self: left;
+
+}
+#nom{
+    grid-area: nom;
+    justify-self: left;
+}
+#labelprenom{
+    grid-area: labelprenom;
+    justify-self: left;
+
+}
+#prenom{
+    grid-area: prenom;
+    justify-self: left;
+}
+#labeladress{
+    grid-area: labeladress;
+    justify-self: left;
+
+}
+
+#adress{
+    grid-area: adress;
+    justify-self: left;
+}
+#labeltelephone{
+    grid-area: labeltelephone;
+    justify-self: left;
+
+}
+#telephone{
+    grid-area: telephone;
+    justify-self: left;
+}
+#labelemail{
+    grid-area: labelemail;
+    justify-self:left;
+
+}
+#email{
+    grid-area: email;
+    justify-self: left;
+}
+#labelobjet{
+    grid-area: labelobjet;
+    justify-self: left;
+
+}
+#objet{
+    grid-area:  objet;
+    justify-self: left
+}
+#labelmessage{
+    grid-area: labelmessage;
+    justify-self: left;
+
+}
+#message{
+    grid-area: message;
+    justify-self: left;
+}
+#envois{
+    grid-area: envois;
+    justify-self:left;
+
+}
+
