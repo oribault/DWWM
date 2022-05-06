@@ -1,10 +1,8 @@
 
 body {
 	font-size: 76%;
-
 	margin: 0px;
 	padding: 0px;
-
 	background-color: #F5E9D9;
 }
 
@@ -12,7 +10,6 @@ body {
 	width: 590px;
 	margin-left: auto;
 	margin-right: auto;
-
 }
 
 h1 {
@@ -41,7 +38,6 @@ h1 {
 	padding-top: Px;
 	padding-left: 40px;
 	padding-right: 10px;
-
 }
 
 .contenu {
@@ -52,8 +48,6 @@ h1 {
 	text-align: left;
 	padding: 0px;
 	margin: 0px;
-
-
 }
 
 #footer {
@@ -61,5 +55,4 @@ h1 {
 	position: relative;
 	background-image: url(img_formu/bas.jpg);
 	background-repeat: no-repeat;
-
 }

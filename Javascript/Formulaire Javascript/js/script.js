@@ -16,7 +16,7 @@ function afficherMois()
 }
 
 
-function afficherjour() 
+function afficherJour() 
 {
     let opt2 = document.createElement('option');
     opt2.textContent = "jour";
@@ -44,7 +44,7 @@ function afficherjour()
     
 }
     
-function afficherannee() 
+function afficherAnnee() 
 {
         let opt3 = document.createElement('option');
         opt3.textContent = "annee";
@@ -61,11 +61,11 @@ function afficherannee()
 
 }
 
-    afficherannee();
+    afficherAnnee();
 
-    afficherjour();
+    afficherJour();
 
-    afficherMois()
+afficherMois();
 
 function valNum(_champ){
     let chaine=_champ.toUpperCase();
@@ -132,27 +132,31 @@ document.querySelectorAll("select").forEach( item=>item.addEventListener( "chang
  
 }))
 
-function nbJourAnniv(){
-	let mois1 = document.querySelector("#mois").value;
-	let jour1 = document.querySelector("#jour").value;
-	let annee1 = document.querySelector("#annee").value;
-	let date1 = new Date();
-	let dateAnniv = annee1 / mois1 / jour1;
-	let years = moment().diff(dateAnniv, 'years')
-	let ajustToday = dateAnniv.substring(5) === date1.substring(5) ? 0 : 1;
-	let nextBirthday = moment(datAnniv).add(years + ajustToday, 'years');
-	let daysUntilBirthday = nextBirthday.diff(today,'day')
-}
+//function nbJourAnniv() {
+
+//}
 
 function setCookie(_nom,_valeur){
     let datejour=new Date();
-    let dateExp=new Date(datejour.getFullYear(),datejour.getMonth(),datejour.getDate(),(datejour.getHours()+1));
+    let dateExp=new Date(datejour.getFullYear(),datejour.getMonth(),(datejour.getDate()+1));
     let expiration=dateExp.toUTCString(); 
     document.cookie=_nom + "="+_valeur + ";expires="+expiration+";SameSite=Strict";
 
 
 }
-
+function calculJourAnniv(_mois,_jour) {
+	let dateJour = new Date()
+	let dateAnniv = new Date(dateJour.getFullYear(), _mois - 1, _jour);
+	let jourAnniv = 0;
+	if (dateJour < dateAnniv) {
+		 jourAnniv = Math.ceil((dateAnniv - dateJour) / (24 * 60 *60* 1000));
+	}
+	else {
+		dateAnniv = new Date(dateJour.getFullYear() + 1, _mois - 1, _jour)
+		jourAnniv = Math.ceil((dateAnniv - dateJour) / (24 * 60 *60*1000));
+	}
+	return jourAnniv;
+}
 
 function valider(){
 setCookie("monnom",document.getElementById("nom").value);
@@ -160,8 +164,17 @@ setCookie("monprenom",document.getElementById("prenom").value);
 setCookie("monmois", document.getElementById("mois").value);
 setCookie("monannee", document.getElementById("annee").value);
 setCookie("monjour", document.getElementById("jour").value);
-setCookie("monpseudo", document.getElementById("pseudo").value);	
-window.location.href="accueil.html";
+setCookie("monpseudo", document.getElementById("pseudo").value);
+setCookie("maville", document.getElementById("ville").value);
+setCookie("jourAnniv", calculJourAnniv(document.getElementById("mois").value, document.getElementById('jour').value));
+
+	let jour = (document.getElementById("jour").value < 10) ? "0" + document.getElementById("jour").value : document.getElementById("jour").value;
+	let monmois = (document.getElementById("mois").value < 10) ? "0" + document.getElementById("mois").value : document.getElementById("mois").value;
+	let dateNaissance = jour + "/" + monmois + "/" + document.getElementById("annee").value;
+	setCookie("naissance", dateNaissance);
+
+
+	window.location.href = "accueil.html";
 
 }
 
