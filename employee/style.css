@@ -1,0 +1,15 @@
+h1{
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#tabEmployees{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+.btn-primary{
+	margin-right: 10px;
+}

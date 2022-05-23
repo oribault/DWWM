@@ -1,0 +1,63 @@
+#tabcarte{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	margin-top : 50px;
+}
+h1{
+	text-align: center;
+	color: #555;
+}
+#divImage{
+	margin-bottom: 50px;
+	color: white;
+	width: 30%;
+	height: 500px;
+	background-color: black;
+	margin-right: auto;margin-left: auto;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas:"character character" 
+	"image power"
+	"image attack"
+	" image defense"
+	". .";
+	
+}
+#character {
+	grid-area: character;
+	text-align: center;
+	background-color: darkgreen;
+}
+#nom{
+font-size: 1.4em;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+img{
+	grid-area: image;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#power{
+	grid-area: power;
+	text-align: right;
+	margin-right: 20px;
+}
+#attack{
+	grid-area: attack;
+	text-align: right;
+	margin-right: 20px;
+}
+#defense{
+	grid-area: defense;
+	text-align: right;
+	margin-right: 20px;
+}
+
+#boutton{
+	margin-bottom: 50px;
+	text-align: center;
+}
